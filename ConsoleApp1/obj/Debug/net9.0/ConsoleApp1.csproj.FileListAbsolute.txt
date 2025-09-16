@@ -12,3 +12,4 @@
 /home/helis/c#/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.pdb
 /home/helis/c#/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.genruntimeconfig.cache
 /home/helis/c#/ConsoleApp1/obj/Debug/net9.0/ref/ConsoleApp1.dll
+/home/helis/c#/ConsoleApp1/obj/Debug/net9.0/ConsoleApp1.sourcelink.json

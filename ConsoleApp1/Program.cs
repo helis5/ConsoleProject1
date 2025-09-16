@@ -5,6 +5,7 @@ namespace Task58
     {
         static void Main()
         {
+            Console.WriteLine("Введите X, Y:");
             int x = int.Parse(Console.ReadLine());
             int y = int.Parse(Console.ReadLine());
 
