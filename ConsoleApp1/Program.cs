@@ -6,8 +6,8 @@ namespace Task58
         static void Main()
         {
             Console.WriteLine("Введите X, Y:");
-            int x = int.Parse(Console.ReadLine());
-            int y = int.Parse(Console.ReadLine());
+            double x = double.Parse(Console.ReadLine());
+            double y = double.Parse(Console.ReadLine());
 
             Console.WriteLine("Задание 58:");
             Task58.A.Calculate(x);
@@ -23,7 +23,8 @@ namespace Task58
             Task59.F.Calculate(x, y);
             Task59.G.Calculate(x, y);
             Task59.H.Calculate(x, y);
-
+            Task59.I.Calculate(x, y);
+            Task59.J.Calculate(x, y);
         }
     }
 }

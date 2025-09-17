@@ -4,9 +4,9 @@ namespace Task58
 {
     public static class A
     {
-        public static void Calculate(int x)
+        public static void Calculate(double x)
         {
-            int y;
+            double y;
             if (x < 0)
             {
                 y = -x;
@@ -21,9 +21,9 @@ namespace Task58
 
     public static class B
     {
-        public static void Calculate(int x)
+        public static void Calculate(double x)
         {
-            int y;
+            double y;
             if (x < -1)
             {
                 y = 1 / (x * x);
@@ -41,9 +41,9 @@ namespace Task58
     }
     public static class C
     {
-        public static void Calculate(int x)
+        public static void Calculate(double x)
         {
-            int y;
+            double y;
             if (x < 0)
             {
                 y = Math.Abs(-x - 1);
@@ -58,9 +58,9 @@ namespace Task58
     }
     public static class D
     {
-        public static void Calculate(int x)
+        public static void Calculate(double x)
         {
-            int y;
+            double y;
             if (x < 0)
             {
                 y = -x;
