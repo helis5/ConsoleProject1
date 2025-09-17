@@ -2,7 +2,8 @@ using System;
 
 public static class UnderGraph
 {
-    public static bool Calculate(double x, double y){
+    public static bool Calculate(double x, double y)
+    {
         if (x <= 0)
         {
             double y1 = -x;
@@ -10,10 +11,11 @@ public static class UnderGraph
         }
         else
         {
-            double y2 = -x*x;
+            double y2 = -x * x;
             return (y <= y2);
         }
     }
+
 }
 
 namespace Task60

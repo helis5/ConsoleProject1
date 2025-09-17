@@ -19,9 +19,7 @@ namespace Task59
             bool isInCircle_10 = Math.Sqrt(x * x + y * y) <= 1.0;
             bool noInCircle_05 = Math.Sqrt(x * x + y * y) >= 0.5;
             if (isInCircle_10 && noInCircle_05)
-            {
                 Console.WriteLine("Б)внутри");
-            }
             else Console.WriteLine("Б)снаружи");
         }
     }
@@ -31,9 +29,7 @@ namespace Task59
         {
             //просто квадрат
             if (x >= -1 && x <= 1)
-            {
                 Console.WriteLine((y >= -1 && y <= 1) ? "В)внутри" : "В)снаружи");
-            }
             else Console.WriteLine("В)снаружи");
 
         }
