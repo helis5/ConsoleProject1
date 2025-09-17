@@ -7,7 +7,7 @@ namespace Task59
         public static void Calculate(double x, double y)
         {
             //Уравнение окружности и высчитывание квадратичного расстояния от начала координат к заданной точке
-            bool isInCircle = (x * x + y * y) <= 1.0;
+            bool isInCircle = Math.Sqrt(x * x + y * y) <= 1.0;
             Console.WriteLine(isInCircle ? "А)внутри круга" : "А)вне круга");
         }
     }
