@@ -94,7 +94,7 @@ namespace Task59
         {
             // Аналогично |x|; точки ниже прямой, левее x = 1 и выше y = -2
             x = Math.Abs(x);
-            if (y >= 2 && y <= 1 && x <= 1)
+            if (y >= -2 && y <= 1 && x <= 1)
             {
                 double y1 = x;
                 Console.WriteLine((y <= y1) ? "З)внутри" : "З)снаружи");
