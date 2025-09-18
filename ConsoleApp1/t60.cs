@@ -1,32 +1,20 @@
 using System;
 
-public static class UnderGraph
-{
-    public static bool Calculate(double x, double y)
-    {
-        if (x <= 0)
-        {
-            double y1 = -x;
-            return (y <= y1);
-        }
-        else
-        {
-            double y2 = -x * x;
-            return (y <= y2);
-        }
-    }
-
-}
-
 namespace Task60
 {
-    //Без понятия что означает (рис. 1, a-3, е), буду решать по рис. 1 (а) и пусть заштрихованная область будет областью под графиками функций
     public static class A
     {
         public static void Calculate(double x, double y)
         {
             Console.Write("A) ");
-            Console.WriteLine(UnderGraph.Calculate(x, y) ? 0 : x);
+            if (y >= 0)
+            {
+                bool isInCircle_10 = Math.Sqrt(x * x + y * y) <= 1.0;
+                bool noInCircle_05 = Math.Sqrt(x * x + y * y) >= 0.5;
+                if (isInCircle_10 && noInCircle_05) Console.WriteLine("Да; 0");
+                else Console.WriteLine($"Нет; {x}");
+            }
+            else Console.WriteLine($"Нет; {x}");
         }
     }
     public static class B
@@ -34,7 +22,13 @@ namespace Task60
         public static void Calculate(double x, double y)
         {
             Console.Write("Б) ");
-            Console.WriteLine(UnderGraph.Calculate(x, y) ? -3 : y * y);
+            if (y <= x / 2)
+            {
+                bool isInCircle_10 = Math.Sqrt(x * x + y * y) <= 1.0;
+                if (isInCircle_10) Console.WriteLine("-3");
+                else Console.WriteLine($"Нет; {y * y}");
+            }
+            else Console.WriteLine($"Нет; {y * y}");
         }
     }
     public static class C
@@ -42,7 +36,11 @@ namespace Task60
         public static void Calculate(double x, double y)
         {
             Console.Write("В) ");
-            Console.WriteLine(UnderGraph.Calculate(x, y) ? x - y : x * y + 7);
+            bool isInCircle_10 = Math.Sqrt(x * x + Math.Pow(y - 1, 2)) <= 1.0;
+            if (isInCircle_10 && (y <= 1 - x * x))
+                Console.WriteLine($"Да; {x - y}");
+            else Console.WriteLine($"Нет; {x * y + 7}");
+
         }
     }
     public static class D
@@ -50,7 +48,22 @@ namespace Task60
         public static void Calculate(double x, double y)
         {
             Console.Write("Г) ");
-            Console.WriteLine(UnderGraph.Calculate(x, y) ? x * x - 1 : Math.Sqrt(Math.Abs(x - 1)));
+            if (y >= 0)
+            {
+                if (x <= 0) 
+                {
+                    bool isInCircle_10 = Math.Sqrt(x * x + y * y) <= 1.0;
+                    if (isInCircle_10) Console.WriteLine($"{x * x - 1}");
+                    else Console.WriteLine($"{Math.Sqrt(Math.Abs(x - 1))}");
+                }
+                else if (x > 0)
+                {
+                    bool isInCircle_10 = Math.Sqrt(x * x + y * y) <= 1.0;
+                    bool noInCircle_03 = Math.Sqrt(x * x + y * y) >= 0.3;
+                    if (isInCircle_10 && noInCircle_03) Console.WriteLine($"Да, {x * x - 1}");
+                    else Console.WriteLine($"Нет, {Math.Sqrt(Math.Abs(x - 1))}");
+                }
+            }
         }
     }
     public static class E
@@ -58,7 +71,12 @@ namespace Task60
         public static void Calculate(double x, double y)
         {
             Console.Write("Д) ");
-            Console.WriteLine(UnderGraph.Calculate(x, y) ? Math.Sqrt(Math.Abs(x*x - 1)) : x + y);
+            x = Math.Abs(x);
+            bool isInCircle_10 = Math.Sqrt(x * x + y * y) <= 1.0;
+            if (y >= x && isInCircle_10)
+                Console.WriteLine($"Да, {Math.Sqrt(Math.Abs(x * x - 1))}");
+            else
+                Console.WriteLine($"Нет, {x + y}");
         }
     }
     public static class F
@@ -66,7 +84,10 @@ namespace Task60
         public static void Calculate(double x, double y)
         {
             Console.Write("Е) ");
-            Console.WriteLine(UnderGraph.Calculate(x, y) ? x + y : x - y);
+            if (y >= x * x && y <= Math.Exp(x) && y <= Math.Exp(-x))
+                Console.WriteLine($"Да, {x + y}");
+            else
+                Console.WriteLine($"Да, {x - y}");
         }
     }
     
