@@ -48,17 +48,18 @@ namespace Task60
         public static void Calculate(double x, double y)
         {
             Console.Write("Г) ");
-            bool isInCircle_10 = Math.Sqrt(x * x + y * y) <= 1.0;
-            bool noInCircle_03 = Math.Sqrt(x * x + y * y) >= 0.3;
             if (y >= 0)
             {
-                if (x <= 0)
+                if (x <= 0) 
                 {
+                    bool isInCircle_10 = Math.Sqrt(x * x + y * y) <= 1.0;
                     if (isInCircle_10) Console.WriteLine($"{x * x - 1}");
                     else Console.WriteLine($"{Math.Sqrt(Math.Abs(x - 1))}");
                 }
                 else if (x > 0)
                 {
+                    bool isInCircle_10 = Math.Sqrt(x * x + y * y) <= 1.0;
+                    bool noInCircle_03 = Math.Sqrt(x * x + y * y) >= 0.3;
                     if (isInCircle_10 && noInCircle_03) Console.WriteLine($"Да, {x * x - 1}");
                     else Console.WriteLine($"Нет, {Math.Sqrt(Math.Abs(x - 1))}");
                 }
